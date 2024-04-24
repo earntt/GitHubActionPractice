@@ -1,0 +1,57 @@
+[debug] [2024-04-24T08:38:09.202Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T08:38:09.205Z] Command:       C:\Program Files\nodejs\node.exe F:\CEDT\SE\GitHubActionPractice\node_modules\firebase-tools\lib\bin\firebase.js init hosting:github
+[debug] [2024-04-24T08:38:09.206Z] CLI Version:   13.7.4
+[debug] [2024-04-24T08:38:09.206Z] Platform:      win32
+[debug] [2024-04-24T08:38:09.206Z] Node Version:  v20.11.1
+[debug] [2024-04-24T08:38:09.206Z] Time:          Wed Apr 24 2024 15:38:09 GMT+0700 (Indochina Time)
+[debug] [2024-04-24T08:38:09.206Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-24T08:38:09.305Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T08:38:09.305Z] > authorizing via signed-in user (6633082721@student.chula.ac.th)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  F:\CEDT\SE\GitHubActionPractice
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-04-24T08:38:20.044Z] Using project from CLI flag: github-action-practice
+[debug] [2024-04-24T08:38:20.052Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/github-action-practice [none]
+[debug] [2024-04-24T08:38:20.533Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/github-action-practice 200
+[debug] [2024-04-24T08:38:20.534Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/github-action-practice {"projectId":"github-action-practice","projectNumber":"459020053271","displayName":"github-action-practice","name":"projects/github-action-practice","resources":{"hostingSite":"github-action-practice"},"state":"ACTIVE","etag":"1_5dc91b23-a08c-42a7-9152-119d76ee97e5"}
+[info] i  Using project github-action-practice (github-action-practice) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at F:\CEDT\SE\GitHubActionPractice 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=55692166&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-04-24T08:38:21.574Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-04-24T08:38:21.575Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-04-24T08:38:22.088Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-04-24T08:38:22.088Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-04-24T08:38:22.103Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-04-24T08:38:22.607Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-04-24T08:38:22.607Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"earntt","id":125129802,"node_id":"U_kgDOB3VUSg","avatar_url":"https://avatars.githubusercontent.com/u/125129802?v=4","gravatar_id":"","url":"https://api.github.com/users/earntt","html_url":"https://github.com/earntt","followers_url":"https://api.github.com/users/earntt/followers","following_url":"https://api.github.com/users/earntt/following{/other_user}","gists_url":"https://api.github.com/users/earntt/gists{/gist_id}","starred_url":"https://api.github.com/users/earntt/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/earntt/subscriptions","organizations_url":"https://api.github.com/users/earntt/orgs","repos_url":"https://api.github.com/users/earntt/repos","events_url":"https://api.github.com/users/earntt/events{/privacy}","received_events_url":"https://api.github.com/users/earntt/received_events","type":"User","site_admin":false,"name":"earnt","company":null,"blog":"","location":null,"email":null,"hireable":true,"bio":"just an ordinary computer engineering student","twitter_username":null,"public_repos":4,"public_gists":0,"followers":1,"following":0,"created_at":"2023-02-11T11:45:04Z","updated_at":"2024-04-24T07:07:44Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":856,"collaborators":0,"two_factor_authentication":true,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] +  Success! Logged into GitHub as earntt 
+[info] 
