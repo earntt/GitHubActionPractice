@@ -1,0 +1,46 @@
+[debug] [2024-04-24T11:23:02.059Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T11:23:02.062Z] Command:       C:\Program Files\nodejs\node.exe F:\CEDT\SE\GitHubActionPractice\node_modules\firebase-tools\lib\bin\firebase.js deploy --token $FIREBASE_TOKEN --only hosting
+[debug] [2024-04-24T11:23:02.062Z] CLI Version:   7.16.2
+[debug] [2024-04-24T11:23:02.062Z] Platform:      win32
+[debug] [2024-04-24T11:23:02.062Z] Node Version:  v20.11.1
+[debug] [2024-04-24T11:23:02.062Z] Time:          Wed Apr 24 2024 18:23:02 GMT+0700 (Indochina Time)
+[debug] [2024-04-24T11:23:02.062Z] ----------------------------------------------------------------------
+[debug] [2024-04-24T11:23:02.062Z] 
+[debug] [2024-04-24T11:23:02.073Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T11:23:02.074Z] > authorizing via --token option
+[debug] [2024-04-24T11:23:02.074Z] [iam] checking project github-action-practice for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-24T11:23:02.077Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T11:23:02.077Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2024-04-24T11:23:02.309Z] <<< HTTP RESPONSE 400
+[debug] [2024-04-24T11:23:02.312Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/github-action-practice:testIamPermissions  
+
+[debug] [2024-04-24T11:23:03.430Z] <<< HTTP RESPONSE 401
+[debug] [2024-04-24T11:23:03.431Z] <<< HTTP RESPONSE BODY
+[debug] [2024-04-24T11:23:03.432Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-04-24T11:23:03.433Z] > refreshing access token with scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-24T11:23:03.433Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2024-04-24T11:23:03.489Z] <<< HTTP RESPONSE 400
+[debug] [2024-04-24T11:23:03.490Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/github-action-practice  
+ 
+[debug] [2024-04-24T11:23:03.673Z] <<< HTTP RESPONSE 401
+[debug] [2024-04-24T11:23:03.674Z] <<< HTTP RESPONSE BODY
+[debug] [2024-04-24T11:23:03.674Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-04-24T11:23:03.793Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (F:\CEDT\SE\GitHubActionPractice\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (F:\CEDT\SE\GitHubActionPractice\node_modules\firebase-tools\lib\api.js:40:35)
+    at self.callback (F:\CEDT\SE\GitHubActionPractice\node_modules\request\request.js:185:22)
+    at Request.emit (node:events:518:28)
+    at Request.emit (node:domain:488:12)
+    at Request.<anonymous> (F:\CEDT\SE\GitHubActionPractice\node_modules\request\request.js:1154:10)
+    at Request.emit (node:events:518:28)
+    at Request.emit (node:domain:488:12)
+    at IncomingMessage.<anonymous> (F:\CEDT\SE\GitHubActionPractice\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (node:events:632:28)
+    at IncomingMessage.emit (node:events:530:35)
+    at IncomingMessage.emit (node:domain:488:12)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: Failed to get Firebase project github-action-practice. Please make sure the project exists and your account has permission to access it.
